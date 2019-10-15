@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Buscar Pelicula
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-toolbar>
+  <ion-searchbar 
+  placeholder="Buscar pelicula"
+  animated
+  debounce="700"
+  [value]="textoBuscar"
+  (ionChange)="buscar( $event )"
+  ></ion-searchbar>
+</ion-toolbar>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label class="ion-text-center">Idea</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let idea of ideas">
+      <ion-label>{{idea}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
